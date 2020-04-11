@@ -13,3 +13,6 @@ IDE: Brackets
 # Issue 
 1. Lag (code is NOT optimized)
 2. Bad gaming experience (too hard to use face to control)
+
+# demo
+https://mumu.tw/FaceBird
