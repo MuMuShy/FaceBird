@@ -8,22 +8,32 @@
   <script defer src="face-api.min.js"></script>
   <script defer src="script.js"></script>
   <style>
-    body {
+      body{
+          background-color: black;
+      }
+    video {
       margin: 0;
       padding: 0;
-      width: 100vw;
-      height: 100vh;
+      width: 500px;
+      height: 500px;
       display: flex;
       justify-content: center;
       align-items: center;
+      position:absolute;
+      top:500px;
+      left:80px
     }
 
     canvas {
       position: absolute;
+      top:10px;
+        left:550px;
     }
   </style>
 </head>
 <body>
   <video id="video" width="720" height="560" autoplay muted></video>
+   <canvas id="canvas" width="288" height="512"></canvas>
+   <script src="flappybird.js"></script>
 </body>
 </html>
