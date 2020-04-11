@@ -54,7 +54,6 @@ pipe[0] = {
     x : cvs.width,
     y : 0
 };
-
 // draw images
 time=setInterval(function(){
 //your code
@@ -71,7 +70,7 @@ time=setInterval(function(){
 function draw(){
     
     ctx.drawImage(bg,0,0);
-
+    
     for(var i = 0; i < pipe.length; i++){
         
         constant = pipeNorth.height+gap;

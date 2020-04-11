@@ -23,12 +23,11 @@ video.addEventListener('play', () => {
   var nowexpressions 
   setInterval(async () => {
     const detections = await faceapi.detectAllFaces(video, new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks().withFaceExpressions()
-    try{
-        //console.log(detections[0]['expressions'])
-        get_now_expressions(detections[0])
-    }catch{
-        
-  }
+    if(detections[0]==null){
+        //no face
+    }else{
+        get_now_expressions(detections[0]);
+    }
     
     const resizedDetections = faceapi.resizeResults(detections, displaySize)
     canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height)
@@ -77,3 +76,4 @@ function get_now_expressions(detection_object){
     }
     console.log(now_mood)
 }
+
